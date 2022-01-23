@@ -39,11 +39,11 @@ if single_character == five_chr_word[4]:
     print(single_character + " found at index 4")
     match = match + 1
 
-if match == int(1):
-    print("1 instance of " + single_character + " in " + five_chr_word)
-
 if match == int(2):
     print("2 instances of " + single_character + " in " + five_chr_word)
+
+if match == int(1):
+    print("1 instance of " + single_character + " in " + five_chr_word)
 
 if match == int(0):
     print("No instances of " + single_character + " in " + five_chr_word)
