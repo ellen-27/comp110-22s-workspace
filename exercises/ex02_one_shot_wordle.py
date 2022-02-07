@@ -34,8 +34,6 @@ print(emoji)
 
 if len(guess) == len(secret) and guess != secret:
     print("Not quite. Play again soon!")
-    quit()
 
 if guess == secret:
     print("Woo! You got it!")
-    quit()
