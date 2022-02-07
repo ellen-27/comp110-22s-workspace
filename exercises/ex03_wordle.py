@@ -2,6 +2,7 @@
 
 __author__ = "730331514"
 
+
 def contains_char(long: str, one: str) -> bool:
     """Indicates if single character is found in given string."""
     assert len(one) == 1
@@ -12,8 +13,9 @@ def contains_char(long: str, one: str) -> bool:
             index += 1
             return True
         else:
-            index: int = index + 1
+            index += 1
     return False
+
 
 def emojified(guess: str, secret: str) -> str:
     """Will return an emoji string that reflects likeness of two given strings."""
@@ -31,6 +33,7 @@ def emojified(guess: str, secret: str) -> str:
         i += 1
     return emojis
 
+
 def input_guess(length: int) -> str:
     """Returns user's guess of provided length."""
     i = length
@@ -38,6 +41,7 @@ def input_guess(length: int) -> str:
     while len(word) != length:
         word = input(f"That wasn't {i} chars! Try again: ")
     return word
+
 
 def main() -> None:
     """The entrypoint of the program and main game loop."""
@@ -53,6 +57,7 @@ def main() -> None:
             turns > 7
     if turns >= 7:
         print("X/6 - Sorry, try again tomorrow!")
+
 
 if __name__ == "__main__": 
     main()
