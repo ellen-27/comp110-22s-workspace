@@ -25,4 +25,21 @@ schools.pop("Duke")
 is_duke_present: bool = "Duke" in schools
 print(f"Duke is present: {is_duke_present}")
 
+
 print(schools)
+
+# demonstration of dictionary literals
+
+# empty dictionary literal
+schools = {} # same as dict()
+print(schools)
+
+# alternatively, initialize key-value pairs
+schools = {"UNC": 19400, 
+    "Dukie": 6717, 
+    "NCSU": 26150}
+print(schools) 
+
+# example looping over the keys of a dict
+for school in schools:
+    print(f"Key: {school} -> Value: {schools[school]}")
