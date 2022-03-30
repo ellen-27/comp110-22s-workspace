@@ -7,20 +7,23 @@ def invert(x: dict[str, str]) -> dict[str,str]:
     y: dict[str, str] = {}
     for key in x:
         y[x[key]] = key
+        # if key == y[x[key]]:
+        #     raise KeyError
     return y
 
 def favorite_color(x: dict[str, str]) -> str:
     """Returns most common favorite color ('person':'color')."""
     favorite: str = ""
-    match: int = 2
-    i: int = 0
     count_freq: dict[str, int] = {}
     for color in x:
         if x[color] in count_freq:
-            count_freq[color] += 1
+            count_freq[x[color]] += 1
         else:
-            count_freq[color] = 1
-    print(count_freq) 
+            count_freq[x[color]] = 1
+        # if count_freq[x[color]] == count_freq[x[color]]:
+        #     favorite = 
+        favorite = max([x[color]])
+
     return favorite
 
 def count(x: list[str]) -> dict[str, int]:
